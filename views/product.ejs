@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        table{
+            /* 为表格设置合并边框模型 */
+            border-collapse: collapse;
+            width: 600px;
+        }
+        th,td{
+            border:1px solid #ccc;
+            height:40px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h2>产品列表</h2>
+    <table>
+        <tr>
+            <td>编号</td>
+            <th>产品名称</th>
+            <th>单价</th>
+            <th>库存量</th>
+        </tr>
+        <tr>
+            <td><%=id%></td>
+            <td><%=name%></td>
+            <td><%=price%></td>
+            <td><%=count%></td>
+        </tr>
+        <% for(var i = 0;i < products.length;i++ ){ %>
+        <tr>
+            <td><%= products[i].id %></td>
+            <td><%= products[i].name %></td>
+            <td><%= products[i].price %></td>
+            <td><%= products[i].amount %></td>
+        </tr>   
+        <% } %>
+    </table>
+</body>
+</html>
